@@ -2,6 +2,7 @@ import React from "react";
 import { ScProduct } from "./scParts";
 
 const Product = (props) => {
+  
  
     return (
     <ScProduct>
@@ -11,7 +12,7 @@ const Product = (props) => {
         <div className="footer">
           <p className="price">${props.product.price}</p>
           <button onClick={() => props.addItem(props.product)}>
-            Add to cart
+           {props.existingItem ? " Ekle" : "Add Cart"}
           </button>
         </div>
       </div>
